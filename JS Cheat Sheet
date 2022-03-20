@@ -1,0 +1,67 @@
+// Beginners Guide to Javascript (js)
+
+// Six Primative types
+1. String "any text"
+2. Number 123.45
+3. Boolean true or false
+4. Null null
+5. Undefined undefined
+6. Symbol Symbol('something')
+7. Object (key: value)
+    - array [1, "text", false]
+    - function function name (){}
+
+// Basic Vocabulary
+var a = 7 + "2";
+
+// Object
+var user = {
+    name: "Anna",
+    yearOfBirth: 1994,
+    calculateAge: function ()
+}
+
+//if/else
+if () {
+    else()
+}
+
+//for loop
+for (var i = 0; 1 < 10; 1++)
+
+//while loop
+var i = i;
+while (i < 100) (
+    i = 2;
+    document.write( i + ", ");
+)
+
+// Regular Expression Syntax
+^ - start of string
+$ - end of string
+. - any single Character
+(...) - group section
+[abc] - in range (a, b, or c)
+[^abc] - not in range
+\s - white space
+a? - zero or one of a
+a+ - one or more of a
+a{3} - Exactly 3 of a
+\ - escape character
+
+// JS Arrays
+slice()
+splice()
+shift()
+reverse()
+toSource()
+toString()
+join()
+valueOf()
+
+//JS regExp Object
+compile()
+test()
+exec()
+input
+source
