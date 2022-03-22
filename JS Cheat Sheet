@@ -1,67 +1,345 @@
-// Beginners Guide to Javascript (js)
+//Beginners Guide to JavaScript
 
-// Six Primative types
-1. String "any text"
-2. Number 123.45
-3. Boolean true or false
-4. Null null
-5. Undefined undefined
-6. Symbol Symbol('something')
-7. Object (key: value)
-    - array [1, "text", false]
-    - function function name (){}
+const { concat } = require("nofilter")
 
-// Basic Vocabulary
-var a = 7 + "2";
+<script type="text/javascript">
+    //JS code goes here
+</script>
 
-// Object
-var user = {
-    name: "Anna",
-    yearOfBirth: 1994,
-    calculateAge: function ()
+// call an External JavaScript File
+<script src="DevelopHER.js"></script>
+
+// - Single Line comments
+/* hehehe */
+
+// Variables in Javascript
+var - most common variable.
+const - can not be reassigned and not accessible before they appear within the code.
+let - can be reassigned but no re-delcared
+
+// Data Types
+Numbers - var age = 23
+Variable - var a 
+Text (strings) - var a = "anna"
+Operation - var a = 1 + 2 + 3
+True False - var c = true
+Constant numbers - consta PI = 3.14159
+Objects - var name {firstName:"Anna", lastName:"ten Bensel"}
+
+// Objects
+var person = {
+    firstName: "Anna",
+    lastName: "ten Bensel",
+    age: "25",
+    occupation: "Blockchain Developer"
 }
 
-//if/else
-if () {
-    else()
+// Array
+var fruit = ["Apple", "Peaches", "Banana"];
+
+// Array Methods
+concat() - join several arrays into one
+indexOf() - Return the first position at which a given element appears on a array
+join() -  combine elements of an array into a single stinrg and return the String
+lastIndexOf() - gives the last position at which a given element appears in an array
+slice - pulls a copy of  portion of an array to a new array
+pop() - removes last element from an array
+push() - adds new element to the end
+reverse() - sorts elements in decending order
+shift() - removes the first element of an array
+sort() - sorts alphabetically
+splice() - adds elements into a specific position
+toString() - converts elements into strings
+unshift() - add a new element to the beginning
+valueOf()-  returns a value of a specific Object
+
+// Operators
+//Basic Operators
++ - addition
+- - subtraction
+* - multiplication
+/ - division
+(...) - grouping operator
+% - remainder
+++ - increment numbers
+-- - decrement numbers
+
+// Comparison Operators
+== - equal to
+=== - equal value and equal type
+!= - not equal
+!== - no equal value and not equal type
+> - greater than
+< - less than
+>= - greater than or equal to
+<+ - less than or equal to
+? - ternary operator
+
+// Logical Operators
+&& - Logical and
+|| - logical or
+! - logical not
+
+//Bitwise Operators
+& - And statement
+| - Or statement
+~ - Not
+^ - Xor 
+<< - left shift
+>> - right shift
+>>> - zero fill right shift
+
+// Function
+
+function name(p1, p2, p3) {
+    // what function does 
 }
 
-//for loop
-for (var i = 0; 1 < 10; 1++)
+// Outputting Data
+alert() - outpout data in an alert box
+confirm() - opens a yes/nahhhh dialog and returns true/false
+prompt() - creates a dialog for user input
+document.write() - write directly onto a HTML document
 
-//while loop
-var i = i;
-while (i < 100) (
-    i = 2;
-    document.write( i + ", ");
-)
+// Global function
+decodeURI() - Decodes Uniform Resourec Identifier
+eval() - evaluates a javascript code represented as a string
+encodeURI() - encodes URI in UTF-8
 
-// Regular Expression Syntax
-^ - start of string
-$ - end of string
-. - any single Character
-(...) - group section
-[abc] - in range (a, b, or c)
-[^abc] - not in range
-\s - white space
-a? - zero or one of a
-a+ - one or more of a
-a{3} - Exactly 3 of a
-\ - escape character
+//Loops
+for - common way to create a loop in JS
+while - Sets up conditions under which a loop executes
+do while - executes at least once and performs a check at the end to see if the condition is met to execute again
+break - used to stop and exit the cycle once conditions are met or not met
+continue - skip parts of the cycle if certain conditions are met
 
-// JS Arrays
-slice()
-splice()
-shift()
-reverse()
-toSource()
-toString()
-join()
-valueOf()
+//If/Else Statements
+if (condition){
+    //what to do if the condition is met
+} else {
+    // what to do if it is not met
+}
 
-//JS regExp Object
-compile()
-test()
-exec()
-input
-source
+// Strings
+var person = "Anna ten Bensel";
+
+//String Methods
+CharAt()  - returns a character at a specific position inside a string
+lastIndexOf() / indexOF () - searches backwards and forwards
+search() - executes a search for matching texts and returns its position
+concat()- joins two or more strings into one
+toLowerCase() - Converts your strings to lower case
+valueOf() - returns the primitive value of a string Object
+
+//Regular Expression Syntax
+e - evaluate replacement
+i - perform case senstive matching
+g - global matching
+m - multiple line matching
+s - treat strings as a single line
+x - allows comment and whitespace in the pattern
+u - ungreedy pattern
+
+//Brackets
+[abc] - Find what's between these brackets'
+[^abc] - find whats not in the brackets
+(a|b|c) -find alternatives separated with |
+
+
+// Metacharacters
+. — Find a single character, except newline or line terminator
+\w — Word character
+\W — Non-word character
+\d — A digit
+\D — A non-digit character
+\s — Whitespace character
+\S — Non-whitespace character
+\b — Find a match at the beginning/end of a word
+\B — A match not at the beginning/end of a word
+\0 — NUL character
+\n — A new line character
+\f — Form feed character
+\r — Carriage return character
+\t — Tab character
+\v — Vertical tab character
+\xxx — The character specified by an octal number xxx
+\xdd — Character specified by a hexadecimal number dd
+\uxxxx — The Unicode character specified by a hexadecimal number XXXX
+
+//Quantifiers
+n+ — Matches any string that contains at least one n
+n* — Any string that contains zero or more occurrences of n
+n? — A string that contains zero or one occurrence of n
+n{X} — String that contains a sequence of X ns
+n{X,Y} — Strings that contain a sequence of X to Y n
+n{X,} — Matches any string that contains a sequence of at least X n
+n$ — Any string with n at the end of it
+^n — String with n at the beginning of it
+?=n — Any string that is followed by a specific string n
+?!n — String that is not followed by a specific string ni
+
+
+//Number Properties, Number Methods & Math Methods
+MAX_VALUE — The maximum numeric value representable in JavaScript
+MIN_VALUE — Smallest positive numeric value representable in JavaScript
+NaN — The “Not-a-Number” value
+NEGATIVE_INFINITY — The negative Infinity value
+POSITIVE_INFINITY — Positive Infinity value
+
+toExponential() — Returns the string with a rounded number written as exponential notation
+toFixed() — Returns the string of a number with a specified number of decimals
+toPrecision() — String of a number written with a specified length
+toString() — Returns a number as a string
+valueOf() — Returns a number as a number
+
+E — Euler’s number
+LN2 — The natural logarithm of 2
+LN10 — Natural logarithm of 10
+LOG2E — Base 2 logarithm of E
+LOG10E — Base 10 logarithm of E
+PI — The number PI
+SQRT1_2 — Square root of 1/2
+SQRT2 — The square root of 2
+
+abs(x) — Returns the absolute (positive) value of x
+acos(x) — The arccosine of x, in radians
+asin(x) — Arcsine of x, in radians
+atan(x) — The arctangent of x as a numeric value
+atan2(y,x) — Arctangent of the quotient of its arguments
+ceil(x) — Value of x rounded up to its nearest integer
+cos(x) — The cosine of x (x is in radians)
+exp(x) — Value of Ex
+floor(x) — The value of x rounded down to its nearest integer
+log(x) — The natural logarithm (base E) of x
+max(x,y,z,...,n) — Returns the number with the highest value
+min(x,y,z,...,n) — Same for the number with the lowest value
+pow(x,y) — X to the power of y
+random() — Returns a random number between 0 and 1
+round(x) — The value of x rounded to its nearest integer
+sin(x) — The sine of x (x is in radians)
+sqrt(x) — Square root of x
+tan(x) — The tangent of an angle
+
+// Dates and Times
+
+Date() — Creates a new date object with the current date and time
+Date(2012, 5, 21, 3, 23, 10, 0) — Create a custom date object. The numbers represent a year, month, day, hour, minutes, seconds, milliseconds. You can omit anything you want except for a year and month.
+Date("2022-03-25") — Date declaration as a string
+
+getDate() — Get the day of the month as a number (1-31)
+getDay() —  The weekday as a number (0-6)
+getFullYear() — Year as a four-digit number (yyyy)
+getHours() — Get the hour (0-23)
+getMilliseconds() — The millisecond (0-999)
+getMinutes() — Get the minute (0-59)
+getMonth() —  Month as a number (0-11)
+getSeconds() — Get the second (0-59)
+getTime() — Get the milliseconds since January 1, 1970
+getUTCDate() — The day (date) of the month in the specified date according to universal time (also available for day, month, full year, hours, minutes etc.)
+parse — Parses a string representation of a date and returns the number of milliseconds since January 1, 1970
+
+setDate() — Set the day as a number (1-31)
+setFullYear() — Sets the year (optionally month and day)
+setHours() — Set the hour (0-23)
+setMilliseconds() — Set milliseconds (0-999)
+setMinutes() — Sets the minutes (0-59)
+setMonth() — Set the month (0-11)
+setSeconds() — Sets the seconds (0-59)
+setTime() — Set the time (milliseconds since January 1, 1970)
+setUTCDate() — Sets the day of the month for a specified date according to universal time (also available for day, month, full year, hours, minutes etc.)
+
+//Document Object Model (DOM)
+
+//Node Methods and Properties
+attributes — Returns a live collection of all attributes registered to an element
+baseURI — Provides the absolute base URL of an HTML element
+childNodes — Gives a collection of an element’s child nodes
+firstChild — Returns the first child node of an element
+lastChild — The last child node of an element
+nextSibling — Gives you the next node at the same node tree level
+nodeName —Returns the name of a node
+nodeType —  Returns the type of a node
+nodeValue — Sets or returns the value of a node
+ownerDocument — The top-level document object for this node
+parentNode — Returns the parent node of an element
+previousSibling — Returns the node immediately preceding the current one
+textContent — Sets or returns the textual content of a node and its descendants
+
+appendChild() — Adds a new child node to an element as the last child node
+cloneNode() — Clones an HTML element
+compareDocumentPosition() — Compares the document position of two elements
+getFeature() — Returns an object which implements the APIs of a specified feature
+hasAttributes() — Returns true if an element has any attributes, otherwise false
+hasChildNodes() — Returns true if an element has any child nodes, otherwise false
+insertBefore() — Inserts a new child node before a specified, existing child node
+isDefaultNamespace() — Returns true if a specified namespaceURI is the default, otherwise false
+isEqualNode() — Checks if two elements are equal
+isSameNode() — Checks if two elements are the same node
+isSupported() — Returns true if a specified feature is supported on the element
+lookupNamespaceURI() — Returns the namespace URI associated with a given node
+lookupPrefix() — Returns a DOMString containing the prefix for a given namespace URI if present
+normalize() — Joins adjacent text nodes and removes empty text nodes in an element
+removeChild() — Removes a child node from an element
+replaceChild() — Replaces a child node in an element
+
+getAttribute() — Returns the specified attribute value of an element node
+getAttributeNS() — Returns string value of the attribute with the specified namespace and name
+getAttributeNode() — Gets the specified attribute node
+getAttributeNodeNS() — Returns the attribute node for the attribute with the given namespace and name
+getElementsByTagName() — Provides a collection of all child elements with the specified tag name
+getElementsByTagNameNS() —  Returns a live HTMLCollection of elements with a certain tag name belonging to the given namespace
+hasAttribute() — Returns true if an element has any attributes, otherwise false
+hasAttributeNS() — Provides a true/false value indicating whether the current element in a given namespace has the specified attribute
+removeAttribute() — Removes a specified attribute from an element
+removeAttributeNS() — Removes the specified attribute from an element within a certain namespace
+removeAttributeNode() — Takes away a specified attribute node and returns the removed node
+setAttribute() — Sets or changes the specified attribute to a specified value
+setAttributeNS() —  Adds a new attribute or changes the value of an attribute with the given namespace and name
+setAttributeNode() — Sets or changes the specified attribute node
+setAttributeNodeNS() — Adds a new namespaced attribute node to an element
+
+//Events
+onclick — The event occurs when the user clicks on an element
+oncontextmenu — User right-clicks on an element to open a context menu
+ondblclick — The user double-clicks on an element
+onmousedown — User presses a mouse button over an element
+onmouseenter — The pointer moves onto an element
+onmouseleave — Pointer moves out of an element
+onmousemove — The pointer is moving while it is over an element
+onmouseover — When the pointer is moved onto an element or one of its children
+onmouseout — User moves the mouse pointer out of an element or one of its children
+onmouseup — The user releases a mouse button while over an element
+
+onkeydown — When the user is pressing a key down
+onkeypress — The moment the user starts pressing a key
+onkeyup — The user releases a key
+
+onabort — The loading of a media is aborted
+onbeforeunload — Event occurs before the document is about to be unloaded
+onerror — An error occurs while loading an external file
+onhashchange — There have been changes to the anchor part of a URL
+onload — When an object has loaded
+onpagehide — The user navigates away from a webpage
+onpageshow — When the user navigates to a webpage
+onresize — The document view is resized
+onscroll — An element’s scrollbar is being scrolled
+onunload — Event occurs when a page has unloaded
+
+ondrag — An element is dragged
+ondragend — The user has finished dragging the element
+ondragenter — The dragged element enters a drop target
+ondragleave — A dragged element leaves the drop target
+ondragover — The dragged element is on top of the drop target
+ondragstart — User starts to drag an element
+ondrop — Dragged element is dropped on the drop target
+
+oncopy — User copies the content of an element
+oncut — The user cuts an element’s content
+onpaste — A user pastes the content in an element
+
+//Errors
+try — Lets you define a block of code to test for errors
+catch — Set up a block of code to execute in case of an error
+throw — Create custom error messages instead of the standard JavaScript errors
+finally — Lets you execute code, after try and catch, regardless of the result
+
